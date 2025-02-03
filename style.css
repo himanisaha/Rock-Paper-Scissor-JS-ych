@@ -1,0 +1,168 @@
+  body {
+        background-color: rgb(25, 25, 25);
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        left: 450px;
+        top: 5px;
+    }
+
+    .title {
+        font-size: 42px;
+        font-weight: bold;
+        position: relative;
+        left: -4px;
+        top: 5px;
+        text-align: center;
+        text-decoration: underline;
+        color: rgb(255, 255, 255);
+    }
+
+    .icon-btn {
+        height: 100px;
+        width: 100px;
+        background: transparent;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+        margin-top: 50px;
+    }
+
+    .action-btn {
+        background-color: transparent;
+        border: 3px solid transparent;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        animation: rotateBorder 3s linear infinite;
+        /* border-image-source: linear-gradient(45deg, red, yellow, blue, green);
+        border-image-slice: 1; */
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    /* Hover Effect - Glow Effect */
+    .action-btn:hover {
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
+        transform: scale(1.1);
+        /* Slightly increases size */
+    }
+
+    /* Rotation Animation */
+    @keyframes rotateBorder {
+        0% {
+            transform: rotate(0deg);
+            border-image-source: linear-gradient(45deg, red, yellow, blue, green);
+        }
+
+        100% {
+            transform: rotate(360deg);
+            border-image-source: linear-gradient(45deg, blue, green, red, yellow);
+        }
+    }
+
+
+    /* Rotation Animation */
+    @keyframes rotateBorder {
+        0% {
+            transform: rotate(0deg);
+            border-image-source: linear-gradient(45deg, red, yellow, blue, green);
+        }
+
+        100% {
+            transform: rotate(360deg);
+            border-image-source: linear-gradient(45deg, blue, green, red, yellow);
+        }
+    }
+
+
+    .action-btn:active {
+        transform: scale(0.9);
+        transition: transform 0.1s ease-in-out;
+    }
+
+    .js-action {
+        position: relative;
+        top: 25px;
+        left: 52px;
+    }
+
+    .score {
+        margin-top: 65px;
+        margin-left: -17px;
+        text-align: center;
+    }
+
+    .result {
+        position: relative;
+        top: 10px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .js-result {
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        position: relative;
+        left: 124px;
+    }
+
+    .js-result.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .reset-score-btn {
+        background-color: white;
+        border: none;
+        font-size: 16px;
+        padding: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 50px;
+        transition: background-color 0.5s ease-in-out;
+        position: relative;
+        top: 40px;
+        left: 200px;
+    }
+
+    .btn-clicked {
+        background-color: yellow;
+        color: red;
+    }
+
+    @keyframes shake {
+        0% {
+            transform: translateX(0);
+        }
+
+        25% {
+            transform: translateX(-5px);
+        }
+
+        50% {
+            transform: translateX(5px);
+        }
+
+        75% {
+            transform: translateX(-5px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .shake {
+        animation: shake 0.5s ease-in-out;
+    }
